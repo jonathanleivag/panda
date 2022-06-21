@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panda</title>
+
+  <style>
+    *,
+    ::after,
+    ::before {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+    }
+
+    .panda {
+      color: #000;
+      margin: auto;
+      height: 9.375rem;
+      width: 12.5rem;
+      border: .375rem solid currentColor;
+      border-radius: 50%;
+      position: relative;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nose {
+      width: 1.875rem;
+      height: 1.25rem;
+      background-color: currentColor;
+      border-radius: 50%;
+      position: relative;
+      top: 1.25rem;
+    }
+
+    .nose::before {
+      content: "";
+      width: .375rem;
+      height: .875rem;
+      position: absolute;
+      top: 1.25rem;
+      left: .75rem;
+      background-color: currentColor;
+    }
+
+    .nose::after {
+      content: "";
+      position: absolute;
+      width: 2.5rem;
+      height: 1.25rem;
+      border: .375rem solid currentColor;
+      top: 1.25rem;
+      left: -0.3125rem;
+      border-radius: 0 0 3.75rem 3.75rem;
+      border-top: transparent;
+    }
+
+    .eyes {
+      position: absolute;
+      width: 3.75rem;
+      height: 3.75rem;
+      background-color: currentColor;
+      border-radius: 50%;
+      top: 1.875rem;
+      left: 1.25rem;
+    }
+
+    .eyes--r {
+      left: unset;
+      right: 1.25rem;
+    }
+
+    .pupil {
+      width: 1.75rem;
+      height: 1.75rem;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: .625rem;
+      right: .625rem;
+      box-shadow: -0.9375rem 1.25rem 0 -0.5rem #fff;
+    }
+
+    .ears {
+      width: 4.375rem;
+      height: 4.375rem;
+      background-color: currentColor;
+      border-radius: 50%;
+      position: absolute;
+      top: -0.9375rem;
+      left: 0;
+      z-index: -1;
+      box-shadow: 7.375rem 0;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="panda">
+    <div class="ears"></div>
+    <div class="eyes">
+      <div class="pupil"></div>
+    </div>
+    <div class="eyes eyes--r">
+      <div class="pupil"></div>
+    </div>
+    <div class="nose"></div>
+  </div>
+</body>
+
+</html>
